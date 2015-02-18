@@ -1,0 +1,35 @@
+//Reuben 2/18/15
+
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+	float h1,k1,r1,h2,k2,r2,distance,sum;
+	//asks what the values are and then takes user input
+	cout<<"What is the X-Value of center of first Circle\n";
+	cin>>h1;
+	cout<<"What is the Y-Value of center of first Circle\n";
+	cin>>k1;
+	cout<<"What is the radius of first circle\n";
+	cin>>r1;
+	cout<<"What is the X-Value of center of second Circle\n";
+	cin>>h2;
+	cout<<"What is the Y-Value of center of second Circle\n";
+	cin>>k2;
+	cout<<"What is the radius of second circle\n";
+	cin>>r2;
+	//tells user what the equations of the circles are based off of the values given
+	cout<<"Your equation for the first circle is (x-"<<h1<<")^2+(y-"<<k1<<")^2="<<r1*r1<<"\n";
+	cout<<"Your equation for the second circle is (x-"<<h2<<")^2+(y-"<<k2<<")^2="<<r2*r2<<"\n";
+	//calculates distance and sum of radii
+	distance = (k2-k1)/(h2-h1);
+	sum = r1+r2;
+	//tells user if they collide or not
+	if (distance<=sum)
+		cout<<"They collide\n";
+	else 
+		cout<<"They don't collide\n";
+	system ("pause");
+}
